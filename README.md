@@ -20,6 +20,12 @@
 https://raw.githubusercontent.com/Zhugey/gkdba/main/dist/gkd.json5
 ```
 
+- GitHub加速jsdelivr源
+
+```txt
+https://fastly.jsdelivr.net/gh/Zhugey/gkdba@main/dist/gkd.json5
+```
+
 - 当前订阅文件仅为自用
 
 - 查看 [适配 APP 列表](./dist/README.md)
