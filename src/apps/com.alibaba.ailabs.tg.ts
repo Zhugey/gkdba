@@ -13,6 +13,7 @@ export default defineGkdApp({
           activityIds:
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
           matches: '@View + View[text^="读书节福利 年卡"]',
+          snapshotUrls: 'https://i.gkd.li/i/19872303',
         },
       ],
     },
@@ -27,6 +28,7 @@ export default defineGkdApp({
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
           matches:
             'ImageView[id="com.alibaba.ailabs.tg:id/tg_bitmap_dialog_cancel_button"]',
+          snapshotUrls: 'https://i.gkd.li/i/19872292',
         },
       ],
     },
@@ -40,6 +42,7 @@ export default defineGkdApp({
           activityIds:
             'com.alibaba.ailabs.tg.thirdpartymusic.bind.BindActivity',
           matches: 'ImageView[id="com.alibaba.ailabs.tg:id/im_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/19872255',
         },
       ],
     },
