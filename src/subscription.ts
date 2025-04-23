@@ -9,7 +9,8 @@ export default defineGkdSubscription({
   version: 0,
   author: 'Zhugey',
   checkUpdateUrl: './gkd.version.json5',
-  supportUri: 'https://github.com/Zhugey/gkdba/main/dist/gkd.json5',
+  supportUri:
+    'https://raw.githubusercontent.com/Zhugey/gkdba/main/dist/gkd.json5',
   categories,
   globalGroups,
   apps: await batchImportApps(`${import.meta.dirname}/apps`),
