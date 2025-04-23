@@ -7,9 +7,7 @@
 
 ## 说明
 
-- **请求适配或报告问题 -> [点击反馈](https://github.com/AIsouler/GKD_subscription/issues/new/choose)**
-
-- **交流讨论 -> [点击查看或开启讨论](https://github.com/AIsouler/GKD_subscription/discussions)**
+- **请求适配或报告问题 -> [点击反馈](https://github.com/Zhugey/gkdba/issues)**
 
 - **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./Selectors.md)，让规则写起来更轻松！**
 
