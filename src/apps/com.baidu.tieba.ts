@@ -6,11 +6,14 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '首页浏览帖子广告',
+      name: '首页及吧内浏览帖子广告',
       desc: '自动点击X',
       rules: [
         {
-          activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+          activityIds: [
+            'com.baidu.tieba.tblauncher.MainTabActivity',
+            'com.baidu.tieba.forum.ForumActivity',
+          ],
           matches:
             'TextView[text="广告"] <<n FrameLayout - RelativeLayout > TextView[text="刚刚"] + FrameLayout',
           snapshotUrls: 'https://i.gkd.li/i/19872730',
