@@ -39,5 +39,5 @@ https://raw.githubusercontent.com/Zhugey/gkdba/main/dist/gkd.json5
 
 ## 感谢以下项目
 
-[gkd](https://gkd.li/)
-[gkd-kit/subscription](https://github.com/gkd-kit/subscription)
+- [gkd](https://gkd.li/)
+- [gkd-kit/subscription](https://github.com/gkd-kit/subscription)
