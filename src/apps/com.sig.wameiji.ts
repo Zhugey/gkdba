@@ -11,6 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.sig.wameiji.MainActivity',
+          matchTime: 1000,
           matches: 'View[desc^="跳过"]',
           snapshotUrls: 'https://i.gkd.li/i/19891103',
         },
