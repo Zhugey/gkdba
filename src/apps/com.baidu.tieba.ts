@@ -13,6 +13,7 @@ export default defineGkdApp({
           activityIds: [
             'com.baidu.tieba.tblauncher.MainTabActivity',
             'com.baidu.tieba.forum.ForumActivity',
+            'com.baidu.tieba.pb.pb.main.PbActivity',
           ],
           matches:
             'TextView[text="广告"] <<n FrameLayout - RelativeLayout > TextView[text="刚刚"] + FrameLayout',
