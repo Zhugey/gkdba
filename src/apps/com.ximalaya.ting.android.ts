@@ -42,7 +42,8 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches: 'ImageView[id="com.ximalaya.ting.android:id/main_iv_close"]',
+          matches:
+            'TextView[text="VIP会员限时优惠"] < RelativeLayout + ImageView[id="com.ximalaya.ting.android:id/main_iv_close"]',
           snapshotUrls: 'https://i.gkd.li/i/20149718',
         },
       ],
@@ -178,6 +179,18 @@ export default defineGkdApp({
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches:
             '@TextView[text="直接关闭"] <<n FrameLayout[id="android:id/content"]',
+        },
+      ],
+    },
+    {
+      key: 12,
+      name: '"我的"页面横幅广告',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@View[desc="关闭广告"] <<n FrameLayout[id="com.ximalaya.ting.android:id/main_fl_banner_ad"]',
         },
       ],
     },
