@@ -116,5 +116,49 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 9,
+      name: '首页分段广告',
+      desc: '自动点击“广告”-点击“直接关闭”',
+      rules: [
+        {
+          key: 1,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@View[desc="关闭广告"] <<n RelativeLayout[id="com.ximalaya.ting.android:id/main_center_big_ad_container"]',
+          snapshotUrls: 'https://i.gkd.li/i/20150045',
+        },
+        {
+          preKeys: 1,
+          key: 2,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@View[desc="关闭广告"] <<n RelativeLayout[id="com.ximalaya.ting.android:id/main_center_big_ad_container"]',
+          snapshotUrls: 'https://i.gkd.li/i/20150046',
+        },
+      ],
+    },
+    {
+      key: 10,
+      name: '播放页分段广告',
+      desc: '自动点击“广告”-点击“直接关闭”',
+      rules: [
+        {
+          key: 1,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            'ImageView[desc="广告封面"] + FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][top<5000]',
+          snapshotUrls: 'https://i.gkd.li/i/20150083',
+        },
+        {
+          preKeys: 1,
+          key: 2,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@TextView[text="直接关闭"] <<n FrameLayout[id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/20150092',
+        },
+      ],
+    },
   ],
 });
