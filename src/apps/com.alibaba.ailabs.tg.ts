@@ -46,5 +46,31 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '立夏尝鲜季年卡会员弹窗',
+      desc: '自动点击X',
+      rules: [
+        {
+          activityIds:
+            'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
+          matches: '@View +4 View > View[text="限时特价 立即开通"]',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '立夏尝鲜季年卡会员全屏弹窗',
+      desc: '自动点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds:
+            'com.alibaba.ailabs.tg.thirdpartymusic.bind.BindActivity',
+          matches:
+            'ImageView[id="com.alibaba.ailabs.tg:id/tg_bitmap_dialog_cancel_button"]',
+        },
+      ],
+    },
   ],
 });

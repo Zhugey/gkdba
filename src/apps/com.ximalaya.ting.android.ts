@@ -194,5 +194,33 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 13,
+      name: '做任务领VIP广告',
+      desc: '点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@ImageView[id="com.ximalaya.ting.android:id/main_free_listen_time_close_iv"] + TextView[text="完成所有任务享会员权益，畅听VIP专享内容"]',
+          snapshotUrls: 'https://i.gkd.li/i/20665865',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '会员到期广告',
+      desc: '点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@ImageView[id="com.ximalaya.ting.android:id/main_iv_close"] +n TextView[text="连续包月"]',
+          snapshotUrls: 'https://i.gkd.li/i/20665869',
+        },
+      ],
+    },
   ],
 });
