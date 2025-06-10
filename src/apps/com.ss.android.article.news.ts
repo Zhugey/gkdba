@@ -52,7 +52,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
+      key: 3,
       name: '文章内部分流广告',
       desc: '点击不感兴趣',
       activityIds: 'com.bytedance.ugc.forum.innerfeed.ArticleInflowActivity',
