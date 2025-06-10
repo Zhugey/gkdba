@@ -143,18 +143,22 @@ export default defineGkdApp({
       key: 10,
       name: '播放页分段广告1',
       desc: '自动点击“广告”-点击“直接关闭”',
+      activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: [
         {
           key: 1,
-          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches:
+          matches: [
             'ImageView[desc="广告封面"] + FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][height>0]',
-          snapshotUrls: 'https://i.gkd.li/i/20150083',
+            'TextView[text="广告"] <<n FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][height>0]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/20150083',
+            'https://i.gkd.li/i/20150136',
+          ],
         },
         {
           preKeys: 1,
           key: 2,
-          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches:
             '@TextView[text="直接关闭"] <<n FrameLayout[id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/20150092',
@@ -163,27 +167,6 @@ export default defineGkdApp({
     },
     {
       key: 11,
-      name: '播放页分段广告2',
-      desc: '自动点击“广告”-点击“直接关闭”',
-      rules: [
-        {
-          key: 1,
-          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches:
-            'TextView[text="广告"] <<n FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][height>0]',
-          snapshotUrls: 'https://i.gkd.li/i/20150136',
-        },
-        {
-          preKeys: 1,
-          key: 2,
-          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches:
-            '@TextView[text="直接关闭"] <<n FrameLayout[id="android:id/content"]',
-        },
-      ],
-    },
-    {
-      key: 12,
       name: '"我的"页面横幅广告',
       desc: '点击X',
       rules: [
@@ -195,7 +178,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 13,
+      key: 12,
       name: '做任务领VIP广告',
       desc: '点击X',
       rules: [
@@ -209,7 +192,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 14,
+      key: 13,
       name: '会员到期广告',
       desc: '点击X',
       rules: [
@@ -219,6 +202,19 @@ export default defineGkdApp({
           matches:
             '@ImageView[id="com.ximalaya.ting.android:id/main_iv_close"] +n TextView[text="连续包月"]',
           snapshotUrls: 'https://i.gkd.li/i/20665869',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '主页收听时间弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '@ImageView[id="com.ximalaya.ting.android:id/main_point_center_home_dialog_close_iv"] <<n RelativeLayout[id="com.ximalaya.ting.android:id/main_free_listen_time_dialog_container"]',
         },
       ],
     },
