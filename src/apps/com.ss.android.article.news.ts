@@ -70,5 +70,25 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '首页视频流广告',
+      desc: '点击不感兴趣',
+      activityIds: 'com.ss.android.article.news.activity.MainActivity',
+      rules: [
+        {
+          key: 1,
+          matches:
+            'TextView[text="广告"] < ViewGroup - ImageView[desc="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/i/20685787',
+        },
+        {
+          key: 2,
+          preKeys: 1,
+          matches: 'TextView[text="不感兴趣"] <<2 FrameLayout',
+          snapshotUrls: 'https://i.gkd.li/i/20685792',
+        },
+      ],
+    },
   ],
 });

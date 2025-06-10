@@ -141,15 +141,14 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '播放页分段广告1',
+      name: '播放页分段广告',
       desc: '自动点击“广告”-点击“直接关闭”',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: [
         {
           key: 1,
           matches: [
-            'ImageView[desc="广告封面"] + FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][height>0]',
-            'TextView[text="广告"] <<n FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][height>0]',
+            '@FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][visibleToUser=true] <<n FrameLayout[id="com.ximalaya.ting.android:id/main_root_ad_lay"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/20150083',
