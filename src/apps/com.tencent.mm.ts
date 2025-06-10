@@ -27,10 +27,14 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: '@TextView[text="广告"] <<n View[id="ad_container"]',
+          matches:
+            '@TextView[text="广告" && visibleToUser=true] <<n View[id="ad_container"]',
           exampleUrls: [
             'https://e.gkd.li/84ec2f35-821b-4b7a-97d3-a6cc9c6eb1ed',
             'https://e.gkd.li/39e9d7c5-8891-4a35-b980-faad18bf288f',
+          ],
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/15198464', // 防止在文章末尾广告关闭后误触
           ],
         },
         {
