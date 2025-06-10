@@ -35,6 +35,7 @@ export default defineGkdApp({
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/15198464', // 防止在文章末尾广告关闭后误触
+            'https://i.gkd.li/i/20673714',
           ],
         },
         {
