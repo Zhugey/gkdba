@@ -19,15 +19,18 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '读书节年卡会员全屏弹窗',
+      name: '各种会员全屏弹窗',
       desc: '自动点击X',
       rules: [
         {
           fastQuery: true,
-          activityIds:
+          activityIds: [
+            'com.alibaba.ailabs.tg.activity.HomeActivity',
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
+            'com.alibaba.ailabs.tg.thirdpartymusic.bind.BindActivity',
+          ],
           matches:
-            'ImageView[id="com.alibaba.ailabs.tg:id/tg_bitmap_dialog_cancel_button"]',
+            '@ImageView[id="com.alibaba.ailabs.tg:id/tg_bitmap_dialog_cancel_button"] <<n FrameLayout[id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/19872292',
         },
       ],
@@ -55,20 +58,6 @@ export default defineGkdApp({
           activityIds:
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
           matches: '@View +4 View > View[text="限时特价 立即开通"]',
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '立夏尝鲜季年卡会员全屏弹窗',
-      desc: '自动点击X',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds:
-            'com.alibaba.ailabs.tg.thirdpartymusic.bind.BindActivity',
-          matches:
-            'ImageView[id="com.alibaba.ailabs.tg:id/tg_bitmap_dialog_cancel_button"]',
         },
       ],
     },
