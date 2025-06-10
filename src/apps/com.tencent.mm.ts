@@ -28,6 +28,7 @@ export default defineGkdApp({
         {
           key: 1,
           excludeMatches: 'TextView[text="我们会努力为你推荐更优质的广告"]',
+          matchTime: 1000,
           matches:
             'TextView[text^="广告"] <<n View[id="feedbackTagContainer" && visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20673941',
