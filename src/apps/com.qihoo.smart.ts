@@ -11,10 +11,7 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.qihoo.main.flutter.SmartHomeFlutterActivity',
-          matches: [
-            'ImageView[desc="传输安全"] -5 ImageView',
-            'ImageView[desc="传输安全"] -4 ImageView',
-          ],
+          matches: ['View[desc="home_screen_device_card_manage"] +3 ImageView'],
         },
       ],
     },
