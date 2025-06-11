@@ -88,5 +88,24 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '动态界面分流广告',
+      desc: '点击不感兴趣',
+      activityIds: 'com.sina.weibo.MainTabActivity',
+      rules: [
+        {
+          key: 1,
+          matches:
+            'TextView[text="广告"] +2 ImageView[id="com.sina.weibo:id/ly_bottom_menus_btn"]',
+        },
+        {
+          key: 2,
+          preKeys: 1,
+          matches:
+            'TextView[text="不感兴趣"] < LinearLayout - ImageView[id="com.sina.weibo:id/icon"] < LinearLayout',
+        },
+      ],
+    },
   ],
 });

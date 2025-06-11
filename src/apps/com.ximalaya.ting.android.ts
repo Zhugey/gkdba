@@ -126,7 +126,7 @@ export default defineGkdApp({
           key: 1,
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches:
-            '@View[desc="关闭广告"] <<n RelativeLayout[id="com.ximalaya.ting.android:id/main_center_big_ad_container"]',
+            '@View[desc="关闭广告"] - LinearLayout - RelativeLayout < RelativeLayout[id="com.ximalaya.ting.android:id/xm_ad_layout"]',
           snapshotUrls: 'https://i.gkd.li/i/20150045',
         },
         {
@@ -149,6 +149,7 @@ export default defineGkdApp({
           key: 1,
           matches: [
             '@FrameLayout[id="com.ximalaya.ting.android:id/main_close_layout"][visibleToUser=true] <<n FrameLayout[id="com.ximalaya.ting.android:id/main_root_ad_lay"]',
+            'TextView[text="广告"][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/20150083',
