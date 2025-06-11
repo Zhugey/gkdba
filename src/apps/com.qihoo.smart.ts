@@ -11,7 +11,9 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.qihoo.main.flutter.SmartHomeFlutterActivity',
-          matches: ['View[desc="home_screen_device_card_manage"] +3 ImageView'],
+          matches: [
+            'View[desc="home_screen_device_card_manage"] +3 ImageView[desc=null]',
+          ],
         },
       ],
     },
