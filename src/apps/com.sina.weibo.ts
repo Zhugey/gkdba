@@ -75,5 +75,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '首页签到弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.sina.weibo.feed.MPDialogActivity',
+          matches:
+            'TextView[text="点击签到"] -n Image[text="answer_titile"] < View + TextView',
+          snapshotUrls: 'https://i.gkd.li/i/20686275',
+        },
+      ],
+    },
   ],
 });

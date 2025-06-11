@@ -28,6 +28,7 @@ export default defineGkdApp({
             'com.alibaba.ailabs.tg.activity.HomeActivity',
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
             'com.alibaba.ailabs.tg.thirdpartymusic.bind.BindActivity',
+            'com.alibaba.ailabs.tg.splash.WelcomeActivity',
           ],
           matches:
             '@ImageView[id="com.alibaba.ailabs.tg:id/tg_bitmap_dialog_cancel_button"] <<n FrameLayout[id="android:id/content"]',
