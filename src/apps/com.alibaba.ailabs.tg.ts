@@ -6,13 +6,13 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '读书节年卡会员弹窗',
-      desc: '读书节年卡会员弹窗，自动点击X',
+      name: '年卡会员弹窗',
+      desc: '年卡会员弹窗，自动点击X',
       rules: [
         {
           activityIds:
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
-          matches: '@View + View[text^="读书节福利 年卡"]',
+          matches: '@View + View[text*="年卡"]',
           snapshotUrls: 'https://i.gkd.li/i/19872303',
         },
       ],

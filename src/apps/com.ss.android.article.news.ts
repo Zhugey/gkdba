@@ -90,5 +90,29 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '首页分流广告2',
+      desc: '点击更多-不感兴趣-数量过多-提交',
+      activityIds: 'com.ss.android.article.news.activity.MainActivity',
+      rules: [
+        {
+          key: 1,
+          matches: 'FlattenUIText[text="广告"] +n UIView',
+        },
+        {
+          fastQuery: true,
+          key: 2,
+          preKeys: 1,
+          matches: 'TextView[text="数量过多"]',
+        },
+        {
+          fastQuery: true,
+          key: 3,
+          preKeys: 2,
+          matches: 'TextView[text="提交"]',
+        },
+      ],
+    },
   ],
 });

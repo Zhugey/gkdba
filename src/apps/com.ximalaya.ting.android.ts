@@ -192,14 +192,14 @@ export default defineGkdApp({
     },
     {
       key: 13,
-      name: '会员到期广告',
+      name: '会员弹窗广告',
       desc: '点击X',
       rules: [
         {
           fastQuery: true,
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches:
-            '@ImageView[id="com.ximalaya.ting.android:id/main_iv_close"] +n TextView[text="连续包月"]',
+            '@ImageView[id="com.ximalaya.ting.android:id/main_iv_close"] +n TextView[text*="会员"]',
           snapshotUrls: 'https://i.gkd.li/i/20665869',
         },
       ],

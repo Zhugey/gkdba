@@ -57,8 +57,10 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
-          matches:
+          anyMatches: [
             '@ImageView[id="com.sina.weibo:id/close"] < RelativeLayout +n RelativeLayout[id="com.sina.weibo:id/desc_container"] > ImageView[id="com.sina.weibo:id/ad_tag"]',
+            'TextView[text="广告"] < LinearLayout[id="com.sina.weibo:id/ll_close"]',
+          ],
         },
       ],
     },
