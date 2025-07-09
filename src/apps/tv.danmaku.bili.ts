@@ -20,7 +20,7 @@ export default defineGkdApp({
         },
         {
           fastQuery: true,
-          key: 1,
+          key: 2,
           preKeys: 1,
           matches:
             'TextView[text="不感兴趣"] < RelativeLayout[id="tv.danmaku.bili:id/reason1_layout"]',
