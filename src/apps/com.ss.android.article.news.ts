@@ -98,19 +98,25 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: 'FlattenUIText[text="广告"] +n UIView',
+          matches: 'FlattenUIText[text*="广告"] +n UIView',
         },
         {
           fastQuery: true,
           key: 2,
           preKeys: 1,
-          matches: 'TextView[text="数量过多"]',
+          anyMatches: [
+            'TextView[text="数量过多"]',
+            'TextView[text="不感兴趣"] <<2 FrameLayout',
+          ],
         },
         {
           fastQuery: true,
           key: 3,
           preKeys: 2,
-          matches: 'TextView[text="提交"]',
+          anyMatches: [
+            'TextView[text="提交"]',
+            'TextView[text="不感兴趣"] <<2 FrameLayout',
+          ],
         },
       ],
     },

@@ -14,8 +14,8 @@ export default defineGkdApp({
           fastQuery: true,
           key: 1,
           anyMatches: [
-            '@FrameLayout[vid="more"] <<n ViewGroup[vid="ad_tint_frame"][desc*="广告"]',
-            '@FrameLayout[id="tv.danmaku.bili.adbiz:id/more"] <<n ViewGroup[id="tv.danmaku.bili.adbiz:id/ad_tint_frame"][desc*="广告"]',
+            '@FrameLayout[vid="more"] <<n ViewGroup[vid="ad_tint_frame"]',
+            '@FrameLayout[id="tv.danmaku.bili.adbiz:id/more"] <<n ViewGroup[id="tv.danmaku.bili.adbiz:id/ad_tint_frame"]',
           ],
         },
         {
@@ -50,6 +50,31 @@ export default defineGkdApp({
           key: 2,
           preKeys: 1,
           matches: 'TextView[text="不感兴趣"] < FrameLayout',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '播放页下方游戏下载广告',
+      desc: '点击更多-不感兴趣',
+      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+      rules: [
+        {
+          fastQuery: true,
+          key: 1,
+          matches:
+            'TextView[text="下载"] <<n FrameLayout[id="tv.danmaku.bili:id/game_button"] +n ImageView[id="tv.danmaku.bili:id/more"][desc="更多操作"]',
+        },
+        {
+          key: 2,
+          preKeys: 1,
+          matches: 'TextView[text="我不想看"] < RelativeLayout',
+        },
+        {
+          fastQuery: true,
+          key: 3,
+          preKeys: 2,
+          matches: 'TextView[text="将减少相似推荐"] +n TextView[text="关闭"]',
         },
       ],
     },
