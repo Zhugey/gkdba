@@ -72,8 +72,10 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.sina.weibo.MainTabActivity',
-          matches:
+          anyMatches: [
             '@ImageView[id="com.sina.weibo:id/close"] <<n FrameLayout[id="com.sina.weibo:id/floating_window"]',
+            'ImageView[id="com.sina.weibo:id/closeView"]',
+          ],
         },
       ],
     },

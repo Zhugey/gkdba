@@ -25,8 +25,10 @@ export default defineGkdApp({
         {
           fastQuery: true,
           key: 1,
-          matches:
+          anyMatches: [
             'TextView[text="广告"] +n ImageView[id="com.tencent.qqmusic:id/bc_"]',
+            'TextView[text="广告"] +n ImageView[id="com.tencent.qqmusic:id/bcx"]',
+          ],
         },
         {
           key: 2,

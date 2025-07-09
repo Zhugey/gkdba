@@ -25,6 +25,13 @@ export default defineGkdApp({
           matches:
             'TextView[text="不感兴趣"] < RelativeLayout[id="tv.danmaku.bili:id/reason1_layout"]',
         },
+        {
+          fastQuery: true,
+          key: 3,
+          preKeys: 2,
+          matches:
+            'TextView[text="将减少展示此类广告"] +n TextView[text="关闭"]',
+        },
       ],
     },
     {
