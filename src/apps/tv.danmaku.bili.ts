@@ -6,9 +6,12 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '视频页底部推荐广告',
+      name: '视频页底部推荐及搜索广告',
       desc: '点击更多-不感兴趣',
-      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+      activityIds: [
+        'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+        'com.bilibili.search2.main.BiliMainSearchActivity',
+      ],
       rules: [
         {
           fastQuery: true,
