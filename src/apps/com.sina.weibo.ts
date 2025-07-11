@@ -86,8 +86,10 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.sina.weibo.feed.MPDialogActivity',
-          matches:
+          anyMatches: [
             'TextView[text="点击签到"] -n Image[text="answer_titile"] < View + TextView',
+            'TextView[text="点击签到"] -n TextView[text*="今日签到领"] < View + TextView',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/20686275',
         },
       ],
