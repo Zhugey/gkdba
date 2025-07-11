@@ -46,8 +46,11 @@ export default defineGkdApp({
         {
           fastQuery: true,
           key: 1,
-          matches:
+          anyMatches: [
             '@FrameLayout[vid="more"] <<n ViewGroup[vid="ad_tint_frame"]',
+            '@FrameLayout[vid="more"] <<n ViewGroup[desc*="轻点两下查看详情"]',
+            '@FrameLayout[vid="more"] <<n RelativeLayout[vid="ad_tint_frame"]',
+          ],
         },
         {
           key: 2,
