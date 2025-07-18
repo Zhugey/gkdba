@@ -26,7 +26,7 @@ export default defineGkdApp({
           key: 2,
           preKeys: 1,
           matches:
-            'TextView[text="不感兴趣"] < RelativeLayout[id="tv.danmaku.bili:id/reason1_layout"]',
+            '@RelativeLayout[id="tv.danmaku.bili:id/reason1_layout"] <<n LinearLayout[id="tv.danmaku.bili:id/dislike_reasons"]',
         },
         {
           fastQuery: true,
@@ -51,6 +51,8 @@ export default defineGkdApp({
             '@FrameLayout[vid="more"] <<n ViewGroup[desc*="轻点两下查看详情"]',
             '@FrameLayout[vid="more"] <<n RelativeLayout[vid="ad_tint_frame"]',
           ],
+          excludeMatches:
+            '@LinearLayout[id="tv.danmaku.bili:id/inline_live_badge"] <<n ViewGroup[desc*="轻点两下查看详情"]',
         },
         {
           key: 2,

@@ -21,5 +21,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '首页游戏广告',
+      desc: '自动点击X',
+      rules: [
+        {
+          activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+          matches:
+            'TextView[text^="游戏"] <<n RecyclerView[id="com.baidu.tieba:id/obfuscated"] > RelativeLayout > View +n LinearLayout > RelativeLayout + ImageView[id="com.baidu.tieba:id/obfuscated"]',
+        },
+      ],
+    },
   ],
 });

@@ -59,7 +59,9 @@ export default defineGkdApp({
           activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
           anyMatches: [
             '@ImageView[id="com.sina.weibo:id/close"] < RelativeLayout +n RelativeLayout[id="com.sina.weibo:id/desc_container"] > ImageView[id="com.sina.weibo:id/ad_tag"]',
-            'TextView[text="广告"] < LinearLayout[id="com.sina.weibo:id/ll_close"]',
+            'TextView[text="广告" || text="荐读"] < LinearLayout[id="com.sina.weibo:id/ll_close"]',
+            'TextView[text="广告" || text="荐读"] + ImageView[id="com.sina.weibo:id/iv_close_icon"]',
+            'ImageView[id="com.sina.weibo:id/iv_ad_x"]',
           ],
         },
       ],
@@ -110,6 +112,28 @@ export default defineGkdApp({
           preKeys: 1,
           matches:
             'TextView[text="不感兴趣"] < LinearLayout - ImageView[id="com.sina.weibo:id/icon"] < LinearLayout',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '帖子内部“荐读”广告',
+      desc: '点击X-对此内容不感兴趣',
+      activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+      rules: [
+        {
+          fastQuery: true,
+          key: 1,
+          anyMatches: [
+            'TextView[text="荐读"] < LinearLayout[id="com.sina.weibo:id/ll_close"]',
+            'TextView[text="荐读"] + ImageView[id="com.sina.weibo:id/iv_close_icon"]',
+          ],
+        },
+        {
+          fastQuery: true,
+          key: 2,
+          preKeys: 1,
+          matches: 'TextView[text="对此内容不感兴趣"]',
         },
       ],
     },

@@ -33,20 +33,28 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches:
+          anyMatches: [
             'FlattenUIText[text="广告  刚刚  "] + UIView[text="不感兴趣 按钮"]',
+            '@ImageView[desc="不感兴趣"] <<n ViewGroup[desc^="广告"]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/20665779',
         },
         {
           key: 2,
           preKeys: 1,
-          matches: 'TextView[text="不感兴趣"] <<2 FrameLayout',
+          anyMatches: [
+            'TextView[text="不感兴趣"] <<2 FrameLayout',
+            'TextView[text="不感兴趣"] < ViewGroup[id="com.ss.android.article.news:id/dk"] < FrameLayout',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/20665797',
         },
         {
           key: 3,
           preKeys: 2,
-          matches: 'TextView[text="不感兴趣"] <<2 FrameLayout',
+          anyMatches: [
+            'TextView[text="不感兴趣"] <<2 FrameLayout',
+            'TextView[text="不感兴趣"] < ViewGroup[id="com.ss.android.article.news:id/dk"] < FrameLayout',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/20665799',
         },
       ],
@@ -117,6 +125,18 @@ export default defineGkdApp({
             'TextView[text="提交"]',
             'TextView[text="不感兴趣"] <<2 FrameLayout',
           ],
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '评论区满意否',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
+          matches:
+            'TextView[text="你对该内容下的评论是否满意？"] < LinearLayout +3 ImageView',
         },
       ],
     },

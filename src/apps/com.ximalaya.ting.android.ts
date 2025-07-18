@@ -217,5 +217,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 15,
+      name: '“向他人推荐”弹窗广告',
+      desc: '点击“关闭”',
+      rules: [
+        {
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            'TextView[text="你有多大意愿向他人推荐使用喜马拉雅？"] + ImageView[desc="关闭"]',
+        },
+      ],
+    },
   ],
 });
