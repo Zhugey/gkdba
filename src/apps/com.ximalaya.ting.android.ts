@@ -121,19 +121,20 @@ export default defineGkdApp({
       key: 9,
       name: '首页分段广告',
       desc: '自动点击“广告”-点击“直接关闭”',
+      activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: [
         {
           key: 1,
-          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches: 'View[desc="关闭广告"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/20150045',
         },
         {
           preKeys: 1,
           key: 2,
-          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches:
+          anyMatches: [
             '@TextView[text="直接关闭"] <<n FrameLayout[id="android:id/content"]',
+            'TextView[text="重复出现"] < FrameLayout[id="com.ximalaya.ting.android:id/host_item_pager_index_bg"]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/20150046',
         },
       ],
@@ -226,6 +227,19 @@ export default defineGkdApp({
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches:
             'TextView[text="你有多大意愿向他人推荐使用喜马拉雅？"] + ImageView[desc="关闭"]',
+        },
+      ],
+    },
+    {
+      key: 16,
+      name: '“支持主播，分享一下”弹窗广告',
+      desc: '点击“X”',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            'TextView[text="支持主播，分享一下"] <<n LinearLayout + ImageView[id="com.ximalaya.ting.android:id/main_card_close"]',
         },
       ],
     },

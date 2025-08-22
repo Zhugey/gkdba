@@ -19,6 +19,7 @@ export default defineGkdApp({
           anyMatches: [
             '@FrameLayout[vid="more"] <<n ViewGroup[vid="ad_tint_frame"]',
             '@FrameLayout[id="tv.danmaku.bili.adbiz:id/more"] <<n ViewGroup[id="tv.danmaku.bili.adbiz:id/ad_tint_frame"]',
+            '@FrameLayout[vid="more_layout"] <<n FrameLayout[vid="ad_tint_frame"][desc*="轻点两下查看详情"]',
           ],
         },
         {

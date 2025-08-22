@@ -35,7 +35,7 @@ export default defineGkdApp({
           key: 1,
           anyMatches: [
             'FlattenUIText[text="广告  刚刚  "] + UIView[text="不感兴趣 按钮"]',
-            '@ImageView[desc="不感兴趣"] <<n ViewGroup[desc^="广告"]',
+            'ViewGroup[id="com.ss.android.article.news:id/fwz"][desc^="广告"] > ImageView[desc="不感兴趣"]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/20665779',
         },
@@ -134,7 +134,10 @@ export default defineGkdApp({
       desc: '点击X',
       rules: [
         {
-          activityIds: 'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
+          activityIds: [
+            'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
+            'com.ss.android.ugc.detail.activity.TikTokActivity',
+          ],
           matches:
             'TextView[text="你对该内容下的评论是否满意？"] < LinearLayout +3 ImageView',
         },

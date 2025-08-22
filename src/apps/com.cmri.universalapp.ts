@@ -24,7 +24,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.cmri.universalapp.SmartMainActivity',
+          activityIds: [
+            'com.cmri.universalapp.SmartMainActivity',
+            'com.cmri.universalapp.SmartMainProxyActivity',
+          ],
           matches:
             '@ImageView[id="com.cmri.universalapp:id/iv_close"] <<n RelativeLayout[id="com.cmri.universalapp:id/rl_yunying"]',
         },
@@ -37,7 +40,10 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.cmri.universalapp.SmartMainActivity',
+          activityIds: [
+            'com.cmri.universalapp.SmartMainActivity',
+            'com.cmri.universalapp.SmartMainProxyActivity',
+          ],
           matches:
             '@ImageView[id="com.cmri.universalapp:id/iv_close"] <<n RelativeLayout[id="com.cmri.universalapp:id/main_float_drag_layout"]',
         },

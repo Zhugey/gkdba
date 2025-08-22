@@ -12,7 +12,10 @@ export default defineGkdApp({
         {
           activityIds:
             'com.alibaba.ailabs.tg.oneservice.cluster.services.h5alert.MarketingPopupWebViewActivity',
-          matches: '@View + View[text*="年卡"]',
+          anyMatches: [
+            '@View + View[text*="年卡"]',
+            '@View + TextView[text*="年卡"]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/19872303',
         },
       ],

@@ -28,8 +28,10 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
-          matches:
+          anyMatches: [
             'TextView[text^="游戏"] <<n RecyclerView[id="com.baidu.tieba:id/obfuscated"] > RelativeLayout > View +n LinearLayout > RelativeLayout + ImageView[id="com.baidu.tieba:id/obfuscated"]',
+            'TextView[text^="游戏"] <<n RecyclerView[id="com.baidu.tieba:id/obfuscated"] > RelativeLayout > View +n LinearLayout > ImageView[id="com.baidu.tieba:id/obfuscated"]',
+          ],
         },
       ],
     },
