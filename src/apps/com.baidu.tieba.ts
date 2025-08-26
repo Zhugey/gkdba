@@ -35,5 +35,16 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '贴内右下角浮窗广告',
+      desc: '自动点击X',
+      rules: [
+        {
+          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          matches: 'TextView[text="广告"] + ImageView[vid="obfuscated"]',
+        },
+      ],
+    },
   ],
 });

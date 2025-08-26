@@ -28,8 +28,10 @@ export default defineGkdApp({
         {
           key: 1,
           excludeMatches: 'TextView[text="我们会努力为你推荐更优质的广告"]',
-          matches:
+          anyMatches: [
             'TextView[text^="广告"] <<n View[id="feedbackTagContainer" && visibleToUser=true]',
+            'TextView[text^="广告"] < View[id="feedbackTagContainer" && visibleToUser=true] < View[id="container"]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/20673941',
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/20673714', // 防止在文章末尾广告关闭后误触
