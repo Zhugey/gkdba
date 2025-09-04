@@ -41,6 +41,7 @@ export default defineGkdApp({
             'ViewGroup[id="com.ss.android.article.news:id/fwz"][desc^="广告"] > ImageView[desc="不感兴趣"]',
             'FlattenUIText[text*="广告"] +n UIView',
             'TextView[text="广告"] < ViewGroup - ImageView[desc="不感兴趣"]',
+            'TextView[text="广告"] < ViewGroup +2 ImageView[desc="不感兴趣"]',
             'LynxFlattenUI[text$="广告"] + UIView[text="不感兴趣 按钮"]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/20665779',
@@ -60,7 +61,10 @@ export default defineGkdApp({
           anyMatches: [
             'TextView[text="为什么看到此广告"] <<n LinearLayout > FrameLayout > ViewGroup[vid="dk"] > TextView[text="不感兴趣"]',
             'LinearLayout[vid="ch"] > FrameLayout > ViewGroup[vid="dk"] > TextView[text="不感兴趣"]',
+            'TextView[text="不感兴趣"] < ViewGroup[vid="dk"] < FrameLayout',
           ],
+          excludeMatches:
+            '@TextView[text="拉黑作者"] < ViewGroup[vid="dk"] < FrameLayout',
         },
       ],
     },
@@ -94,9 +98,35 @@ export default defineGkdApp({
             'com.ss.android.ugc.detail.activity.TikTokActivity',
             'com.bytedance.ugc.forum.innerfeed.ArticleInflowActivity',
             'com.ss.android.detail.feature.detail2.view.NewDetailActivity',
+            'com.bytedance.ugc.textflow.container.TextFlowActivity',
           ],
           matches:
             'TextView[text="你对该内容下的评论是否满意？"] < LinearLayout +3 ImageView',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '右下角浮窗广告',
+      desc: '点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ss.android.article.news.activity.MainActivity',
+          matches:
+            '@ImageView[vid="d25"] - ImageView[vid="lci"] < FrameLayout[vid="nae"]',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '"我的"页面顶部广告',
+      desc: '点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.ss.android.article.news.activity.MainActivity',
+          matches: 'TextView[text="广告"] + ImageView[vid="hv"]',
         },
       ],
     },
