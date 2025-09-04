@@ -59,6 +59,7 @@ export default defineGkdApp({
           ],
           anyMatches: [
             'TextView[text="为什么看到此广告"] <<n LinearLayout > FrameLayout > ViewGroup[vid="dk"] > TextView[text="不感兴趣"]',
+            'LinearLayout[vid="ch"] > FrameLayout > ViewGroup[vid="dk"] > TextView[text="不感兴趣"]',
           ],
         },
       ],
