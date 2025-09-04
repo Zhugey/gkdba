@@ -58,8 +58,7 @@ export default defineGkdApp({
             'com.bytedance.ugc.forum.innerfeed.ArticleInflowActivity',
           ],
           anyMatches: [
-            'TextView[text="不感兴趣"] <<2 FrameLayout',
-            'TextView[text="不感兴趣"] < ViewGroup[id="com.ss.android.article.news:id/dk"] < FrameLayout',
+            'TextView[text="为什么看到此广告"] <<n LinearLayout > FrameLayout > ViewGroup[vid="dk"] > TextView[text="不感兴趣"]',
           ],
         },
       ],
