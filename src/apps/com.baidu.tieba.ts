@@ -15,8 +15,10 @@ export default defineGkdApp({
             'com.baidu.tieba.forum.ForumActivity',
             'com.baidu.tieba.pb.pb.main.PbActivity',
           ],
-          matches:
+          anyMatches: [
             'TextView[text="广告"] <<n FrameLayout - RelativeLayout > TextView[text="刚刚"] + FrameLayout',
+            'TextView[text="广告"] <<n LinearLayout[vid="obfuscated"] > RelativeLayout > ImageView +2 FrameLayout > ImageView',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/19872730',
         },
       ],
@@ -30,6 +32,7 @@ export default defineGkdApp({
           activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
           anyMatches: [
             'TextView[text^="游戏"] <<n RecyclerView[id="com.baidu.tieba:id/obfuscated"] > RelativeLayout > View +n LinearLayout > RelativeLayout + ImageView[id="com.baidu.tieba:id/obfuscated"]',
+            'TextView[text^="游戏"] <<n RecyclerView[id="com.baidu.tieba:id/obfuscated"] > RelativeLayout > View +n LinearLayout > View + ImageView[id="com.baidu.tieba:id/obfuscated"]',
             'TextView[text="贴吧游戏吧"] <<n RecyclerView[id="com.baidu.tieba:id/obfuscated"] > RelativeLayout > View +n LinearLayout > ImageView[id="com.baidu.tieba:id/obfuscated"]',
           ],
         },
