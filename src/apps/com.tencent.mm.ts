@@ -31,6 +31,7 @@ export default defineGkdApp({
           anyMatches: [
             'TextView[text^="广告"] <<n View[id="feedbackTagContainer" && visibleToUser=true]',
             'TextView[text^="广告"] < View[id="feedbackTagContainer" && visibleToUser=true] < View[id="container"]',
+            'TextView[text^="广告"] < View[visibleToUser=true]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/20673941',
           excludeSnapshotUrls: [
@@ -40,7 +41,10 @@ export default defineGkdApp({
         {
           key: 2,
           preKeys: 1,
-          matches: '@TextView[text="不感兴趣"] <<n View[id="ad_container"]',
+          anyMatches: [
+            'TextView[text="关闭此广告"]',
+            '@TextView[text="不感兴趣"] <<n View[id="ad_container"]',
+          ],
           exampleUrls: 'https://e.gkd.li/0c8248a1-2c59-4bcd-b632-cf3031321fc8',
         },
         {

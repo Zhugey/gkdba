@@ -52,8 +52,11 @@ export default defineGkdApp({
             '@FrameLayout[vid="more"] <<n ViewGroup[desc*="轻点两下查看详情"]',
             '@FrameLayout[vid="more"] <<n RelativeLayout[vid="ad_tint_frame"]',
           ],
-          excludeMatches:
+          excludeMatches: [
+            '@FrameLayout[vid="more"] - LinearLayout[vid="desc_content"] > View[vid="tag_rcmd"]',
             '@LinearLayout[id="tv.danmaku.bili:id/inline_live_badge"] <<n ViewGroup[desc*="轻点两下查看详情"]',
+            '@FrameLayout[vid="more"] - LinearLayoutCompat[vid="desc_content"] > LinearLayout > TextView[text*="万人感兴趣"]',
+          ],
         },
         {
           key: 2,
