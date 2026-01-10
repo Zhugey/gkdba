@@ -40,5 +40,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '全屏弹窗广告',
+      desc: '点击X',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.baidu.netdisk.ui.MainActivity',
+          matches:
+            'TextView[text*="购买"] <<n FrameLayout > ViewGroup > ImageView[vid="iv_close"]',
+        },
+      ],
+    },
   ],
 });
