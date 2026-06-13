@@ -202,6 +202,7 @@ export default defineGkdApp({
           anyMatches: [
             '@ImageView[id="com.ximalaya.ting.android:id/main_iv_close"] +n TextView[text*="会员"]',
             'TextView[text*="开通"] -n ImageView[vid="main_iv_close"]',
+            'ImageView[vid="main_iv_vip_previlege"] -n ImageView[vid="main_iv_close"]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/20665869',
         },
