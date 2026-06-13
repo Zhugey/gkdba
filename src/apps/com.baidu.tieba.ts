@@ -22,6 +22,7 @@ export default defineGkdApp({
             'TextView[text*="广告"] + FrameLayout[vid="obfuscated"] > LinearLayout',
             'TextView[text="贴吧游戏"] < LinearLayout +2 FrameLayout[vid="obfuscated"]',
             'TextView[text*="广告"] -n RelativeLayout < ViewGroup[vid="obfuscated"] +3 FrameLayout > LinearLayout + FrameLayout',
+            'TextView[text*="广告"] <<n RelativeLayout > RelativeLayout[vid="obfuscated"] > LinearLayout > FrameLayout +2 RelativeLayout[vid="obfuscated"] > LinearLayout > FrameLayout[vid="obfuscated"]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/19872730',
         },
